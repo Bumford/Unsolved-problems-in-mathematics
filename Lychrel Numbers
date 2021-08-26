@@ -1,0 +1,18 @@
+def reverse(number):
+    y=0
+    while(number>=1):
+        z = number % 10
+        y = 10 * y + z
+        number = number / 10
+        number = int(number)
+    return y
+def lyc(a):
+    n = a
+    m = 0
+    it = 0
+    while n != reverse(n):
+        m = n + reverse(n)
+        n = m
+        it += 1
+    return a, n, it
+print(lyc(int(input()))
